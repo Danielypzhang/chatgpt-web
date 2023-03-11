@@ -76,6 +76,7 @@ app.use('', router)
 app.use('/api', router)
 
 // app.listen(3002, () => globalThis.console.log('Server is running on port 3002'))
+app.listen(process.env.PORT || 3002, () => globalThis.console.log(`Server is running on port ${process.env.PORT || 3002}`))
 // 将 app 导出为函数
 export default async (req: express.Request, res: express.Response) => {
   await app(req, res)
